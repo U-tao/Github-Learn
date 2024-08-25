@@ -8,7 +8,8 @@ void sort(int arr[], int size)
 	{
 		for(int j = 0; j < size-1-i; j++)
 		{
-			if(arr[j] > arr[j+1])
+			// 小张修改算法，从大到小排序
+			if(arr[j] < arr[j+1])
 			{
 				tmp = arr[j];
 				arr[j] = arr[j+1];
