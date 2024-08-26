@@ -1,7 +1,7 @@
 # include <iostream>
 
 
-void fastsort(int arr[], int begin, int end)
+void Fastsort(int arr[], int begin, int end)
 {
 
     int val = arr[begin];
@@ -17,19 +17,18 @@ void fastsort(int arr[], int begin, int end)
     }
     arr[l] = val;
 
-    if(begin < l-1) fastsort(arr, begin, l-1);
-    if(end > l+1) fastsort(arr, l+1, end);
+    if(begin < l-1) Fastsort(arr, begin, l-1);
+    if(end > l+1) Fastsort(arr, l+1, end);
 }
 
 void sort(int arr[], int size)
 {
-    fastsort(arr, 0, size-1);
+    Fastsort(arr, 0, size-1);
 }
 
 int main()
 {
     // 小张添加的注释
-    std::cout << "wrong!" << std::endl;
     int arr[] = {12, 3, 89, 43, 21, 78};
     int size = sizeof(arr)/sizeof(arr[0]);
     sort(arr, size);
