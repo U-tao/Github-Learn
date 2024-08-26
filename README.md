@@ -4,9 +4,9 @@
 
 ![本地路径](./picture/flow_chart.png "md图片插入")
 
-下图为git个人对企业项目代码进行操作流程图
-这里只列出对 dev 分支的添加需求工作流程图，
-对用于发布的release分支和用于热补丁hot的分支，及其他分支工作方式 类似。
+下图为git个人对企业项目代码进行操作流程图<br>
+这里只列出对 dev 分支的添加需求工作流程图<br>
+对用于发布的release分支和用于热补丁hot的分支，及其他分支工作方式 类似<br>
 ![本地路径](./picture/branch_management_chart.png "md图片插入")
 
 
@@ -18,29 +18,29 @@
 #### 1, git 安装
 #### 2, 打开 git bash
 #### 3, git 公私钥配置- 一个公钥代表一个客户端
-	a) ssh-keygen -t rsa -C "注册邮箱名称" (如:5832@qq.com)<br>
-	b) 生成ssh通信用的公钥文件 - /c/User/(用户名)/.ssh/id_rsa.pub<br>
-	c) 第一次配置会让你写生成的文件名称（可以不写，一直回车，默认生成id_rsa.pub）<br>
-	d) 打开github仓库，设置-> SSH and GPG keys-> new SSH key<br>
-	e) 将生成的公钥文件内容，复制粘贴到 new SSH key 的设置中<br>
+a) ssh-keygen -t rsa -C "注册邮箱名称" (如:5832@qq.com)<br>
+b) 生成ssh通信用的公钥文件 - /c/User/(用户名)/.ssh/id_rsa.pub<br>
+c) 第一次配置会让你写生成的文件名称（可以不写，一直回车，默认生成id_rsa.pub）<br>
+d) 打开github仓库，设置-> SSH and GPG keys-> new SSH key<br>
+e) 将生成的公钥文件内容，复制粘贴到 new SSH key 的设置中<br>
 #### 4, 通信验证：
-	**终端命令**：ssh -T git@github.com 验证是否能够通信<br>
-	**期望结果**：Hi (用户名)！You`ve successfully authenticated.<br>
+**终端命令**：ssh -T git@github.com 验证是否能够通信<br>
+**期望结果**：Hi (用户名)！You`ve successfully authenticated.<br>
 #### 5, 配置用户名和邮箱：
-	以后在github的提交，都会附上你的用户名和邮箱<br>
-	**用户名**：git config --global user.name "客户端名称"<br>
-	**邮箱**  ：git config --global user.email "邮箱"<br>
+以后在github的提交，都会附上你的用户名和邮箱<br>
+**用户名**：git config --global user.name "客户端名称"<br>
+**邮箱**  ：git config --global user.email "邮箱"<br>
 #### 注意：以上过程windows 和Linux 系统操作是一样的
-	Linux 通过 sudo apt-get install git /...install openssh-server 安装git<br>
+Linux 通过 sudo apt-get install git /...install openssh-server 安装git<br>
 
 
 ## git 常用命令：
 ### 1, 基础操作：
 #### git clone 
-	**<远程仓库ssh地址>** : 将远程仓库的文件克隆到本地<br>
-		命令执行后，会自动创建：<br>
-		a) 定义本地仓库连接的远程仓库的名称：一般为origin (通过 git remote 查看），后面提交代码用<br>
-		b) 在本地的仓库定义一个主干分支，名称默认等于远程仓库分支名称（main)(通过 git branch -r)<br>
+**<远程仓库ssh地址>** : 将远程仓库的文件克隆到本地<br>
+命令执行后，会自动创建：<br>
+a) 定义本地仓库连接的远程仓库的名称：一般为origin (通过 git remote 查看），后面提交代码用<br>
+b) 在本地的仓库定义一个主干分支，名称默认等于远程仓库分支名称（main)(通过 git branch -r)<br>
 #### git remote	
 查看本地仓库连接的远程仓库名，一般默认为 origin<br>
 #### git log	
