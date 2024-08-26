@@ -1,17 +1,15 @@
 # 此仓库用于 gitup 学习
 
-# 下图为git版本对三个区域的命令控制流程图：
+## 下图为git版本对三个区域的命令控制流程图：
 ![本地路径](./picture/flow_chart.png "md图片插入")
 
-# 下图为git个人对企业项目代码进行操作流程图
+## 下图为git个人对企业项目代码进行操作流程图
 	这里只列出对 dev 分支的添加需求工作流程图<br>
 	对用于发布的release分支和用于热补丁hot的分支，及其他分支工作方式 类似<br>
 ![本地路径](./picture/branch_management_chart.png "md图片插入")
 
 
-以下是个人学习github的总结，便于日常查看：
-
-# git learn
+# 以下是个人学习github的总结，便于日常查看：
 
 ## 准备工作：
 #### 1, git 安装
