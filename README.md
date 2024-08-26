@@ -14,8 +14,8 @@
 
 # git learn
 
-准备工作：
-1, git 安装
+# 准备工作：
+# 1, git 安装
 2, 打开 git bash
 3, git 公私钥配置- 一个公钥代表一个客户端
 	a) ssh-keygen -t rsa -C "注册邮箱名称" (如:5832@qq.com)
