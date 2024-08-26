@@ -1,6 +1,27 @@
 # include <iostream>
 
 
+void Bubblesort(int arr[], int size)
+{
+    int tmp = 0;
+    bool issort = false;
+    for(int i = 0; i < size - 1; i++)
+    {
+	for(int j = 0; j < size - 1 - i; j++)
+	{
+	    if(arr[j] > arr[j+1])
+	    {
+		tmp = arr[j];
+		arr[j] = arr[j+1];
+		arr[j+1] = tmp;
+	    }
+	}
+	if(!issort)
+	    break;
+    }
+
+}
+
 void fastsort(int arr[], int begin, int end)
 {
 
@@ -23,7 +44,8 @@ void fastsort(int arr[], int begin, int end)
 
 void sort(int arr[], int size)
 {
-    fastsort(arr, 0, size-1);
+    // fastsort(arr, 0, size-1);
+    Bubblesort(arr, size);
 }
 
 int main()
