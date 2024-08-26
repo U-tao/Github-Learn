@@ -1,33 +1,43 @@
 # include <iostream>
 
-// 小徐给sort添加注释
+
+void fastsort(int arr[], int begin, int end)
+{
+
+    int val = arr[begin];
+    int l = begin;
+    int r = end;
+    while(l < r)
+    {
+        while(l < r && arr[r] >= val) r--;
+        if(l < r) arr[l++] = arr[r];
+        while(l < r && arr[l] <= val) l++;
+        if(l < r) arr[r--] = arr[l];
+
+    }
+    arr[l] = val;
+
+    if(begin < l-1) fastsort(arr, begin, l-1);
+    if(end > l+1) fastsort(arr, l+1, end);
+}
+
 void sort(int arr[], int size)
 {
-	int tmp = 0;
-	bool flag = false;
-	for(int i = 0; i < size-1; i++)
-	{
-		for(int j = 0; j < size-1-i; j++)
-		{
-			// 小张修改算法，从大到小排序
-			if(arr[j] < arr[j+1])
-			{
-					tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = tmp;
-					flag = true;
-			}
-		}
-		if(!flag) break;
-	}
+    fastsort(arr, 0, size-1);
 }
 
 int main()
 {
     // 小张添加的注释
+    std::cout << "wrong!" << std::endl;
     int arr[] = {12, 3, 89, 43, 21, 78};
     int size = sizeof(arr)/sizeof(arr[0]);
     sort(arr, size);
 
+    std::cout << "排序结果：" << std::endl;
+    for(int i = 0; i < size; i++)
+    {
+ 	    std::cout << arr[i] << " ";
+    }
     return 0;
 }
