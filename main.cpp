@@ -1,5 +1,25 @@
 # include <iostream>
 
+void Bubblesort(int arr[], int size)
+{
+    int tmp = 0;
+    bool issort = false;
+    for(int i = 0; i < size - 1; i++)
+    {
+	for(int j = 0; j < size - 1 - i; j++)
+	{
+	    if(arr[j] > arr[j+1])
+	    {
+		tmp = arr[j];
+		arr[j] = arr[j+1];
+		arr[j+1] = tmp;
+	    }
+	}
+	if(!issort)
+	    break;
+    }
+
+}
 
 void Fastsort(int arr[], int begin, int end)
 {
@@ -23,7 +43,8 @@ void Fastsort(int arr[], int begin, int end)
 
 void sort(int arr[], int size)
 {
-    Fastsort(arr, 0, size-1);
+    // Fastsort(arr, 0, size-1);
+    Bubblesort(arr, size);
 }
 
 int main()
@@ -36,7 +57,7 @@ int main()
     std::cout << "排序结果：" << std::endl;
     for(int i = 0; i < size; i++)
     {
- 	    std::cout << arr[i] << " ";
+        std::cout << arr[i] << " ";
     }
     return 0;
 }
